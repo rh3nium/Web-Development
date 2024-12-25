@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Church Street - The Indian Traveller</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap">
+    <style>
+        body {
+            margin: 0;
+            font-family: Lato, sans-serif;
+            overflow-x: hidden;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(51, 51, 51, 0.8);
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header img {
+            height: 50px;
+            margin-left: 20px;
+        }
+
+        .menu {
+            display: flex;
+            margin-right: 20px;
+        }
+
+        .menu a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        .menu a:hover {
+            background-color: #555;
+            color: white;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(51, 51, 51, 0.9);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1001;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #555;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .social-icons {
+            margin-right: 20px;
+        }
+
+        .social-icons a {
+            color: white;
+            margin-left: 10px;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            color: #ccc;
+        }
+
+        .content-section {
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .content-section .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .content-section .background-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content-section .content {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 600px; /* Ensure the section is tall enough */
+        }
+
+        .content-section .content h1 {
+            font-family: 'IBM Plex Mono', monospace;
+            font-weight: 700;
+            font-size: 36px;
+            margin: 0;
+        }
+
+        .content-section .content p {
+            margin-top: 10px;
+            font-size: 18px;
+            max-width: 800px;
+            font-family: Lato, sans-serif;
+        }
+
+        .content-section .content button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            font-family: Lato, sans-serif;
+            background-color: #333;
+            color: white;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 200%;
+            max-width: 600px;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+            font-family: Lato, sans-serif;
+        }
+
+        .contact-form button {
+            width: 80%;
+            max-width: 500px;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-family: Lato, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="travellogo.jpg" alt="Logo">
+        <div class="menu">
+            <div class="dropdown">
+                <a href="places.html">Travel Spots</a>
+                <div class="dropdown-content">
+                    <a href="churchstreet.html">Church Street</a>
+                    <a href="commercialstreet.html">Commercial Street</a>
+                    <a href="mgroad.html">MG Road</a>
+                </div>
+            </div>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="social-icons">
+            <a href="https://instagram.com/_riyahal" target="_blank" class="fab fa-instagram"></a>
+            <a href="https://x.com/riyahalbhavi" target="_blank" class="fab fa-twitter"></a>
+            <a href="https://www.youtube.com/riahalz" target="_blank" class="fab fa-youtube"></a>
+        </div>
+    </div>
+
+    <div class="content-section first-section">
+        <div class="background-image">
+            <img src="/Users/riyah/Desktop/Web Dev pes/The Indian Traveller/blackbg.jpg" alt="Home bg">
+        </div>
+        <div class="content">
+            <h1>Church Street</h1>
+            <p style = "background-color: black";>A historical venue with shopping, entertainment, and business hubs</p>
+<table border = "border" cellpadding = "5" style = "background-color: black;">
+    <tr>
+        <th width = "200">Address</th>
+        <th>Popularity</th>
+        <th>Dist. b/w city center to place</th>
+        <th>Best time to visit</th>
+        <th>Approx. charges by pre-owned car/shared taxi/bus</th>
+    </tr>
+    <tr>
+        <td>Central Business District, Bengaluru, Karnataka 560001</td>
+        <td>4.5/5</td>
+        <td>15 min (5.6 km)</td>
+        <td>5:00 PM - 10:00 PM</td>
+        <td>Cab: ₹100 - ₹200, BMTC Bus: ₹10 - ₹50</td>
+    </tr>
+</table>
+
+    <p style = "background-color: black";><b>Gallery</b></p>
+
+<table cellpadding = "5">
+    <tr>
+        <th><img src = "/Users/riyah/Desktop/Web Dev pes/The Indian Traveller/churchstreetday.jpg" border = "2px", height = "130", width = "190"></th>
+        <th><img src = "/Users/riyah/Desktop/Web Dev pes/The Indian Traveller/churchstreetshops.jpg" border = "2px", height = "130", width = "190"></th>
+        <th><img src = "/Users/riyah/Desktop/Web Dev pes/The Indian Traveller/churchstreetnight.jpg" border = "2px", height = "130", width = "190"></th>
+    </tr>
+    <tr>
+        <td style = "background-color: black;">Church Street at Day</td>
+        <td style = "background-color: black;">Shops and Venues</td>
+        <td style = "background-color: black;">Church Street at Night</td>
+    </tr>
+</table>
+
+        </div>
+    </div>
+
+</body>
+</html>
