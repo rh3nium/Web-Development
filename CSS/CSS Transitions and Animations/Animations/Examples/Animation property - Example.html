@@ -1,0 +1,41 @@
+<!-- animation property -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>animation property</title>
+
+    <style>
+
+        div {
+            width: 600px;
+            height: 600px;
+            background-color: red;
+            animation-name: sample;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes sample {
+            from {background-color: red;}
+            to {background-color: pink;}
+            to {background-color: green;}
+            to {background-color: blue;}
+            to {background-color: lightgreen;}
+            to {background-color: hotpink;}
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div></div>
+
+</body>
+
+</html>

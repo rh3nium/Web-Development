@@ -1,0 +1,39 @@
+<!-- animation - square to circle -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>animation property</title>
+
+    <style>
+
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: black;
+            border: 50px solid blue;
+            animation: square-to-circle 4s .83s infinite cubic-bezier(1,.015,.295,1.225);
+        }
+
+        @keyframes square-to-circle {
+            0% {border-radius: 0 0 0 0; background: black; transform:rotate(0deg)}
+            25% {border-radius: 25% 25% 25% 25%; background: lightpink; transform:rotate(25deg)}
+            45% {border-radius: 45% 45% 45% 45%; background: violet; transform:rotate(45deg)}
+            75% {border-radius: 75% 75% 75% 75%; background: limegreen; transform:rotate(75deg)}
+            90% {border-radius: 90% 90% 90% 90%; background: yellow; transform:rotate(90deg)}
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div></div>
+
+</body>
+
+</html>

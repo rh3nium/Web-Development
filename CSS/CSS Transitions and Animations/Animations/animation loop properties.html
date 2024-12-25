@@ -1,0 +1,39 @@
+<!-- animation-play-state property: paused -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>animation-play-state property: paused</title>
+
+    <style>
+
+        .animate {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            animation: move 2s infinite;
+        }
+
+        @keyframes move {
+            0% {transform: translateX(0)}
+            100% {transform: translateX(300px)}
+        }
+
+        .paused {
+            animation-play-state: paused;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class = "animate paused"></div>
+
+</body>
+
+</html>
