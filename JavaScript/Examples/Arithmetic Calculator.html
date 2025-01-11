@@ -1,0 +1,96 @@
+<!-- Simple Arithmetic Calculator -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Arithmetic Calculator</title>
+    <style>
+        body {
+            font-family: Helvetica;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input, select {
+            margin: 10px;
+            padding: 5px;
+            font-size: 18px;
+            border: 1px solid blue;
+        }
+        button {
+            margin: 10px;
+            padding: 5px;
+            font-size: 18px;
+            border: 2px solid blue;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 style='color: darkblue'>Simple Arithmetic Calculator</h2>
+    <div>
+        <div><input type="number" id="num1" placeholder="Enter number 1:"></div>
+        <div><input type="number" id="num2" placeholder="Enter number 2:"></div>
+        <div>
+        <label for="operation">Select Operation:
+        <select id="operation">
+            <option value="addition">Addition</option>
+            <option value="subtraction">Subtraction</option>
+            <option value="multiplication">Multiplication</option>
+            <option value="division">Division</option>
+        </select>
+        </div>
+        <div>
+        <button onclick="calculateAnswer()">Calculate</button>
+        </div>
+    </div>
+    <h3 id="result"></h3>
+
+    <script>
+        function calculateAnswer() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            const operation = document.getElementById("operation").value;
+            let result;
+
+            if (isNaN(num1) || isNaN(num2)) {
+                result = "Please enter valid numbers.";
+                document.getElementById("result").textContent = `${result}`;
+            } else {
+                switch (operation) {
+                    case "addition":
+                        result = num1 + num2;
+                        document.getElementById("result").textContent = `Result: ${result}`;
+                        break;
+                    case "subtraction":
+                        result = num1 - num2;
+                        document.getElementById("result").textContent = `Result: ${result}`;
+                        break;
+                    case "multiplication":
+                        result = num1 * num2;
+                        document.getElementById("result").textContent = `Result: ${result}`;
+                        break;
+                    case "division":
+                        if (num2 === 0) {
+                            result = "Division by zero is not allowed.";
+                            document.getElementById("result").textContent = `Result: ${result}`;
+                            break;
+                        } else {
+                            result = num1 / num2;
+                            document.getElementById("result").textContent = `Result: ${result}`;
+                            break;
+                        }
+                        break;
+                    default:
+                        result = "Invalid operation.";
+                        document.getElementById("result").textContent = `${result}`;
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
