@@ -1,0 +1,57 @@
+<!-- Contact Form -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Form PHP</title>
+    <style>
+        h1 {
+            font-family: Courier;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            text-decoration: 10px underline dotted violet;
+        }
+        div, label, input, button {
+            padding-left: 20px;
+            padding-right: 20px;
+            font-family: Helvetica;
+        }
+        input {
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Contact Form with PHP</h1>
+
+    <form onsubmit="return displayInformation()">
+        <div><label for="name">Your name:</label><input type="text" name="name" id="name"></div><br>
+        <div><label for="age">Your age:</label><input type="number" name="age" id="age"></div><br>
+        <div><label for="mail">Your e-mail address:</label><input type="email" name="mail" id="mail"></div><br>
+        <div><label for="dob">Your date of birth:</label><input type="date" name="date" id="dob"></div><br>
+        <div><label for="gender">Your gender:</label></div>
+        <div><input type="radio" name="gender" value="male" checked="checked">Male</div>
+        <div><input type="radio" name="gender" value="female">Female</div>
+        <div><input type="radio" name="gender" value="other">Other</div><br>
+        <div><label for="bio" style="vertical-align: top;">Your message:</label><textarea name="msg" id="msg" placeholder="Enter your message" style="width: 300px; height: 100px;"></textarea></div><br>
+        <div><button type="submit">Submit</button></div>
+    </form>
+
+    <script>
+        function displayInformation() {
+            const username = parseFloat(document.getElementById("name").value);
+            const userage = parseFloat(document.getElementById("age").value);
+            const useremail = document.getElementById("mail").value;
+            const userdob = document.getElementById("dob").value;
+            const usergender = document.getElementById("gender").value;
+            const usermsg = document.getElementById("msg").value;
+        }
+    </script>
+
+</body>
+</html>
